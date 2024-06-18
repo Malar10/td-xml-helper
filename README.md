@@ -16,5 +16,5 @@ options:
   -s SCALE, --scale SCALE
                         scale xml by amount
   -m, --modify          modify existing file instead of creating a new one
-  -d, --debug           replace voxes with debug gizmos
+  -d, --debug           replace vox paths with debug gizmos
 ```
