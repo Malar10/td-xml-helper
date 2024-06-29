@@ -129,8 +129,12 @@ def scale_children(root: ET.Element, scale: float):
             #print(" ".join(pos))
             child.set("pos", " ".join(pos))
 
-        if "scale" in child.attrib:
-            child.set("scale", str(float(child.attrib["scale"]) * scale))
+        if child.tag == "vox":
+            curr_scale = 1
+            if "scale" in child.attrib:
+                curr_scale = float(child.attrib["scale"])
+
+            child.set("scale", str(curr_scale * scale))
 
         scale_children(child, scale)
 
